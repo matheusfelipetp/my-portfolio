@@ -1,0 +1,14 @@
+.logo {
+  @include type-1(24);
+  color: $gray-2;
+  font-weight: 500;
+
+  @include device(x-small) {
+    @include type-1(16);
+  }
+
+  span {
+    color: $primary;
+    font-family: $font-1;
+  }
+}

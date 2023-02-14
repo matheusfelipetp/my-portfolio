@@ -1,0 +1,30 @@
+$font-1: 'Fira Sans', sans-serif;
+
+@function em($pixel, $contexto: 16) {
+  @return $pixel / $contexto + em;
+}
+
+@mixin type-1($size) {
+  font-family: $font-1;
+
+  @if $size == 16 {
+    font-size: em(16);
+    line-height: em(30, 16);
+  } @else if $size == 18 {
+    font-size: em(18);
+    line-height: em(30, 18);
+  } @else if $size == 20 {
+    font-size: em(20);
+    line-height: em(30, 20);
+  } @else if $size == 24 {
+    font-size: em(24);
+    line-height: em(30, 24);
+  } @else if $size == 32 {
+    font-size: em(32);
+    line-height: em(30, 32);
+  } @else if $size == 64 {
+    font-size: em(64);
+    font-weight: 600;
+    line-height: em(30, 64);
+  }
+}

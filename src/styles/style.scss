@@ -1,0 +1,13 @@
+// Global and Utilities
+@import 'reset';
+@import 'colors';
+@import 'fonts';
+@import 'device';
+@import 'global';
+
+// Components
+@import '../components/Header/header';
+@import '../components/Logo/logo';
+@import '../components/NavBar/navbar';
+@import '../components/MenuMobile/menuMobile';
+@import '../components/ToggleMode/toggleMode';
