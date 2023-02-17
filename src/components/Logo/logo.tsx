@@ -1,8 +1,13 @@
+import logo from '../../assets/Logo.svg';
+
 const Logo = () => {
   return (
-    <h1 className="logo">
-      <span>&#8249;</span> Matheus Felipe <span>&#8260; &#8250;</span>
-    </h1>
+    <img
+      className="img-logo"
+      style={{ maxWidth: '50px' }}
+      src={logo}
+      alt="Matheus Felipe - Logo"
+    />
   );
 };
 

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import useMedia from '../../hooks/useMedia';
+import Button from '../Button/button';
 import Logo from '../Logo/logo';
 import MenuMobile from '../MenuMobile/menuMobile';
 import NavBar from '../NavBar/navbar';
@@ -12,22 +13,35 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__content">
-        <Logo />
         {mobile ? (
-          <div className="content__btns">
-            <ToggleMode />
-            <MenuMobile mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
-          </div>
+          <>
+            <Logo />
+            <div className="content__btns">
+              <ToggleMode />
+              <MenuMobile
+                mobileMenu={mobileMenu}
+                setMobileMenu={setMobileMenu}
+              />
+            </div>
+          </>
         ) : (
-          <NavBar />
+          <>
+            <NavBar />
+            <Logo />
+            <div className="content__btns">
+              <ToggleMode />
+              <Button className="btn-contact">Contato</Button>
+            </div>
+          </>
         )}
 
         {mobileMenu && mobile && (
           <>
             <nav className="mobile animate__animated animate__fadeInDownBig animate__fast">
+              <a href="#about-me">Sobre mim</a>
               <a href="#techs">Tecnologias</a>
               <a href="#projects">Projetos</a>
-              <a href="#contact">Contato</a>
+              <a href="#projects">Contato</a>
             </nav>
           </>
         )}

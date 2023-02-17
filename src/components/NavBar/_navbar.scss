@@ -1,9 +1,10 @@
 .navbar {
   display: flex;
-  gap: em(60);
+  max-width: 100%;
+  gap: em(40);
 
   a {
-    @include type-1(18);
+    @include type-1(16);
     color: $gray-2;
     transition: 0.3s ease;
 
