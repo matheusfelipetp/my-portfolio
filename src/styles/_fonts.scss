@@ -1,4 +1,4 @@
-$font-1: 'Fira Sans', sans-serif;
+$font-1: 'Raleway', sans-serif;
 
 @function em($pixel, $contexto: 16) {
   @return $pixel / $contexto + em;
@@ -6,6 +6,7 @@ $font-1: 'Fira Sans', sans-serif;
 
 @mixin type-1($size) {
   font-family: $font-1;
+  font-weight: 400;
 
   @if $size == 16 {
     font-size: em(16);
@@ -18,13 +19,13 @@ $font-1: 'Fira Sans', sans-serif;
     line-height: em(30, 20);
   } @else if $size == 24 {
     font-size: em(24);
-    line-height: em(30, 24);
+    line-height: em(32, 24);
   } @else if $size == 32 {
     font-size: em(32);
     line-height: em(30, 32);
   } @else if $size == 64 {
     font-size: em(64);
     font-weight: 600;
-    line-height: em(30, 64);
+    line-height: em(84, 64);
   }
 }

@@ -1,10 +1,10 @@
 .btn-contact {
   @include type-1(16);
-  background: $gray-1;
+  background: $primary;
   border: 1px solid transparent;
   border-radius: em(32);
-  padding: 0.4rem 2rem;
-  color: $primary;
+  padding: 0.3rem 2rem;
+  color: $gray-1;
   transition: 0.3s ease;
 
   &:hover {

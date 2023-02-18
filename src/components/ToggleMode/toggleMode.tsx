@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { BsFillSunFill } from 'react-icons/bs';
-import { CiDark } from 'react-icons/ci';
+import { MdDarkMode } from 'react-icons/md';
 
 const ToggleMode = () => {
   const [mode, setMode] = useState<string | null>('light');
@@ -8,7 +8,7 @@ const ToggleMode = () => {
   useEffect(() => {
     const currentMode = localStorage.getItem('toggleMode');
     setMode(currentMode);
-  });
+  }, []);
 
   const toggleMode = (modeBtn: string) => {
     localStorage.setItem('toggleMode', modeBtn);
@@ -23,7 +23,7 @@ const ToggleMode = () => {
           onClick={() => toggleMode('dark')}
         />
       ) : (
-        <CiDark
+        <MdDarkMode
           className="icon dark-mode"
           onClick={() => toggleMode('light')}
         />

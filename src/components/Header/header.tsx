@@ -11,7 +11,7 @@ const Header = () => {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
 
   return (
-    <header className="header">
+    <header className="header animate__animated animate__fadeInDown">
       <div className="header__content">
         {mobile ? (
           <>
