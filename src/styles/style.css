@@ -142,6 +142,8 @@ button {
 
 .header {
   padding: 1.5em;
+  position: relative;
+  z-index: 100;
 }
 .header .header__content {
   max-width: 1320px;
@@ -167,7 +169,6 @@ button {
   position: absolute;
   left: 0;
   top: 6.25em;
-  z-index: 100;
   display: flex;
   flex-direction: column;
   gap: 1.25em;
