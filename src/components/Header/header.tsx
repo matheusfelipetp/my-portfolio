@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import useMedia from '../../hooks/useMedia';
 import Button from '../Button/button';
 import Logo from '../Logo/logo';
@@ -6,9 +5,13 @@ import MenuMobile from '../MenuMobile/menuMobile';
 import NavBar from '../NavBar/navbar';
 import ToggleMode from '../ToggleMode/toggleMode';
 
-const Header = () => {
+interface IHeader {
+  mobileMenu: boolean;
+  setMobileMenu: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Header = ({ mobileMenu, setMobileMenu }: IHeader) => {
   const mobile = useMedia('(max-width:60rem)');
-  const [mobileMenu, setMobileMenu] = useState<boolean>(false);
 
   return (
     <header className="header animate__animated animate__fadeInDown">
@@ -30,7 +33,7 @@ const Header = () => {
             <Logo />
             <div className="content__btns">
               <ToggleMode />
-              <Button className="btn-contact">Contato</Button>
+              <Button className="btn-default btn-contact">Contato</Button>
             </div>
           </>
         )}

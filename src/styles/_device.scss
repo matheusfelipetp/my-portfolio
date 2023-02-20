@@ -1,5 +1,6 @@
 $xl-device: 1340px;
 $l-device: 1200px;
+$sl-device: 1050px;
 $m-device: 760px;
 $s-device: 600px;
 $xs-device: 400px;
@@ -11,6 +12,10 @@ $xs-device: 400px;
     }
   } @else if $size == large {
     @media screen and (min-width: $l-device) {
+      @content;
+    }
+  } @else if $size == s-large {
+    @media screen and (max-width: $sl-device) {
       @content;
     }
   } @else if $size == medium {

@@ -1,11 +1,18 @@
-.btn-contact {
+.btn-default {
   @include type-1(16);
-  background: $primary;
-  border: 1px solid transparent;
   border-radius: em(32);
   padding: 0.3rem 2rem;
-  color: $gray-1;
   transition: 0.3s ease;
+
+  @include device(s-large) {
+    @include type-1(14);
+  }
+}
+
+.btn-contact {
+  background: $primary;
+  border: 1px solid transparent;
+  color: $gray-1;
 
   &:hover {
     background: $primary;
@@ -13,5 +20,27 @@
     color: $gray-1;
     border-radius: 0;
     transition: 0.3s ease;
+  }
+
+  @include device(medium) {
+    width: 100%;
+  }
+}
+
+.btn-projects {
+  background: transparent;
+  border: 1px solid $gray-1;
+  color: $gray-1;
+
+  &:hover {
+    background: $bg-2;
+    border: 1px solid $gray-1;
+    color: $gray-1;
+    border-radius: 0;
+    transition: 0.3s ease;
+  }
+
+  @include device(medium) {
+    width: 100%;
   }
 }

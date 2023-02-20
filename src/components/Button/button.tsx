@@ -1,6 +1,6 @@
 interface IButton {
-  children: JSX.Element | string;
-  className: string;
+  children: JSX.Element[] | string;
+  className?: string;
 }
 
 const Button = ({ children, className }: IButton) => {
