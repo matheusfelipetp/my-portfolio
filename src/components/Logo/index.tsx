@@ -1,6 +1,6 @@
-import logo from '../../assets/Logo.svg';
+import logo from '@/assets/Logo.svg';
 
-const Logo = () => {
+export const Logo = () => {
   return (
     <img
       className="img-logo"
@@ -11,4 +11,3 @@ const Logo = () => {
   );
 };
 
-export default Logo;

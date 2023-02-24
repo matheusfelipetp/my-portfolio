@@ -1,17 +1,11 @@
-import useMedia from '../../hooks/useMedia';
-import Button from '../Button/button';
-import Logo from '../Logo/logo';
-import MenuMobile from '../MenuMobile/menuMobile';
-import NavBar from '../NavBar/navbar';
-import ToggleMode from '../ToggleMode/toggleMode';
+import { Button, Logo, MenuMobile, NavBar } from '@/components';
+import { MobileContext } from '@/context/MobileContext';
+import useMedia from '@/hooks/useMedia';
+import { useContext } from 'react';
 
-interface IHeader {
-  mobileMenu: boolean;
-  setMobileMenu: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const Header = ({ mobileMenu, setMobileMenu }: IHeader) => {
+export const Header = () => {
   const mobile = useMedia('(max-width:60rem)');
+  const { mobileMenu } = useContext(MobileContext);
 
   return (
     <header className="header animate__animated animate__fadeInDown">
@@ -20,11 +14,7 @@ const Header = ({ mobileMenu, setMobileMenu }: IHeader) => {
           <>
             <Logo />
             <div className="content__btns">
-              <ToggleMode />
-              <MenuMobile
-                mobileMenu={mobileMenu}
-                setMobileMenu={setMobileMenu}
-              />
+              <MenuMobile />
             </div>
           </>
         ) : (
@@ -32,7 +22,6 @@ const Header = ({ mobileMenu, setMobileMenu }: IHeader) => {
             <NavBar />
             <Logo />
             <div className="content__btns">
-              <ToggleMode />
               <Button className="btn-default btn-contact">Contato</Button>
             </div>
           </>
@@ -52,5 +41,3 @@ const Header = ({ mobileMenu, setMobileMenu }: IHeader) => {
     </header>
   );
 };
-
-export default Header;

@@ -1,12 +1,11 @@
+import { MobileContext } from '@/context/MobileContext';
 import 'animate.css';
+import { useContext } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
-interface IMenuMobile {
-  mobileMenu: boolean;
-  setMobileMenu: React.Dispatch<React.SetStateAction<boolean>>;
-}
+export const MenuMobile = () => {
+  const { mobileMenu, setMobileMenu } = useContext(MobileContext);
 
-const MenuMobile = ({ mobileMenu, setMobileMenu }: IMenuMobile) => {
   return (
     <button
       className="btn-mobile"
@@ -28,5 +27,3 @@ const MenuMobile = ({ mobileMenu, setMobileMenu }: IMenuMobile) => {
     </button>
   );
 };
-
-export default MenuMobile;

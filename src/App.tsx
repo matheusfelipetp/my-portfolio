@@ -1,17 +1,12 @@
-import { useState } from 'react';
-import Header from './components/Header/header';
-import MainContent from './components/MainContent/mainContent';
-import './styles/style.css';
+import { Header, MainContent } from '@/components';
+import { MobileProvider } from '@/context/MobileContext';
+import '@/styles/style.css';
 
-const App = () => {
-  const [mobileMenu, setMobileMenu] = useState<boolean>(false);
-
+export const App = () => {
   return (
-    <>
-      <Header mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
-      <MainContent mobileMenu={mobileMenu} />
-    </>
+    <MobileProvider>
+      <Header />
+      <MainContent />
+    </MobileProvider>
   );
 };
-
-export default App;

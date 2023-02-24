@@ -3,8 +3,7 @@ interface IButton {
   className?: string;
 }
 
-const Button = ({ children, className }: IButton) => {
+export const Button = ({ children, className }: IButton) => {
   return <button className={className}>{children}</button>;
 };
 
-export default Button;

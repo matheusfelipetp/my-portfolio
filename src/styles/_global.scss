@@ -4,7 +4,11 @@
 }
 
 body {
-  background: $bg-1;
+  background: linear-gradient(to right, $bg-1 35%, $bg-2);
+
+  @include device(small) {
+    background: linear-gradient(to right, $bg-1 20%, $bg-2);
+  }
 }
 
 button {

@@ -1,16 +1,14 @@
+import ImgMain from '@/assets/main.png';
+import { Button } from '@/components';
+import { MobileContext } from '@/context/MobileContext';
 import 'animate.css';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { BsGithub } from 'react-icons/bs';
-import ImgMain from '../../assets/main.png';
-import Button from '../Button/button';
 
-interface IMainContent {
-  mobileMenu: boolean;
-}
-
-const MainContent = ({ mobileMenu }: IMainContent) => {
+export const MainContent = () => {
   const [isBtnVisible, setIsBtnVisible] = useState<boolean>(false);
   const [isBioVisible, setIsBioVisible] = useState<boolean>(false);
+  const { mobileMenu } = useContext(MobileContext);
 
   useEffect(() => {
     setTimeout(() => {
@@ -53,10 +51,8 @@ const MainContent = ({ mobileMenu }: IMainContent) => {
         className={`main__img ${mobileMenu && 'opacity'}`}
         src={ImgMain}
         style={{ maxWidth: '100%' }}
-        alt="Foto de perfil"
+        alt="Foto de um notebook com um café ao lado"
       />
     </main>
   );
 };
-
-export default MainContent;

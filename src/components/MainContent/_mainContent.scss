@@ -102,7 +102,7 @@
     position: absolute;
     right: 0;
     top: -20px;
-    animation: bouncing 1.5s ease-in-out infinite alternate;
+    animation: show 2s forwards, bouncing 1.5s ease-in-out infinite alternate;
 
     @include device(x-large) {
       right: 20px;
@@ -116,6 +116,15 @@
     @include device(medium) {
       display: none;
     }
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

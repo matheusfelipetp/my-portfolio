@@ -1,4 +1,4 @@
-const NavBar = () => {
+export const NavBar = () => {
   return (
     <nav className="navbar">
       <a href="#about-me">Sobre mim</a>
@@ -8,4 +8,3 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;

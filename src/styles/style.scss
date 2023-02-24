@@ -6,9 +6,9 @@
 @import 'global';
 
 // Components
-@import '../components/Header/header';
-@import '../components/NavBar/navbar';
-@import '../components/MenuMobile/menuMobile';
-@import '../components/ToggleMode/toggleMode';
-@import '../components/Button/button';
-@import '../components/MainContent/mainContent';
+@import '@/components/Header/header';
+@import '@/components/NavBar/navbar';
+@import '@/components/MenuMobile/menuMobile';
+@import '@/components/Button/button';
+@import '@/components/MainContent/mainContent';
+@import '@/components/SkillsContent/skillsContent';
