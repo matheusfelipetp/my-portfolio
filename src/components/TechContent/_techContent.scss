@@ -76,33 +76,83 @@
 
       &:hover:first-child :where(svg, p) {
         color: #e56027;
+        filter: drop-shadow(0px 0px 80px #e56027);
+
+        @include device(small) {
+          filter: none;
+        }
       }
       &:hover:nth-child(2) :where(svg, p) {
         color: #2760e5;
+        filter: drop-shadow(0px 0px 80px #2760e5);
+
+        @include device(small) {
+          filter: none;
+        }
       }
       &:hover:nth-child(3) :where(svg, p) {
         color: #35b3eb;
+        filter: drop-shadow(0px 0px 80px #35b3eb);
+
+        @include device(small) {
+          filter: none;
+        }
       }
       &:hover:nth-child(4) :where(svg, p) {
         color: #c36291;
+        filter: drop-shadow(0px 0px 80px #c36291);
+
+        @include device(small) {
+          filter: none;
+        }
       }
       &:hover:nth-child(5) :where(svg, p) {
         color: #ead41c;
+        filter: drop-shadow(0px 0px 80px #ead41c);
+
+        @include device(small) {
+          filter: none;
+        }
       }
       &:hover:nth-child(6) :where(svg, p) {
         color: #5ccfee;
+        filter: drop-shadow(0px 0px 80px #5ccfee);
+
+        @include device(small) {
+          filter: none;
+        }
       }
       &:hover:nth-child(7) :where(svg, p) {
         color: #0074c2;
+        filter: drop-shadow(0px 0px 80px #0074c2);
+
+        @include device(small) {
+          filter: none;
+        }
       }
       &:hover:nth-child(8) :where(svg, p) {
         color: #89bb3c;
+        filter: drop-shadow(0px 0px 80px #89bb3c);
+
+        @include device(small) {
+          filter: none;
+        }
       }
       &:hover:nth-child(9) :where(svg, p) {
         color: #30628a;
+        filter: drop-shadow(0px 0px 80px #30628a);
+
+        @include device(small) {
+          filter: none;
+        }
       }
       &:hover:nth-child(10) :where(svg, p) {
         color: #e44c30;
+        filter: drop-shadow(0px 0px 80px #e44c30);
+
+        @include device(small) {
+          filter: none;
+        }
       }
     }
   }

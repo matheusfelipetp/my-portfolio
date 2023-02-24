@@ -77,7 +77,7 @@ export const TechContent = () => {
           <span> &#8249;</span>Tecnologias 🚀<span> /&#8250;</span>
         </h1>
         <p className="paragraph animate__animated animate__fadeInUp">
-          Essas são as tecnologias que domino no momento.
+          Essas são as tecnologias que possuo conhecimento no momento.
         </p>
       </div>
 
