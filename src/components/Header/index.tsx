@@ -1,11 +1,17 @@
-import { Button, Logo, MenuMobile, NavBar } from '@/components';
+import { Logo, MenuMobile, NavBar } from '@/components';
 import { MobileContext } from '@/context/MobileContext';
 import useMedia from '@/hooks/useMedia';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 export const Header = () => {
   const mobile = useMedia('(max-width:60rem)');
-  const { mobileMenu } = useContext(MobileContext);
+  const { pathname } = useLocation();
+  const { mobileMenu, setMobileMenu } = useContext(MobileContext);
+
+  useEffect(() => {
+    setMobileMenu(false);
+  }, [pathname]);
 
   return (
     <header className="header animate__animated animate__fadeInDown">
@@ -22,7 +28,9 @@ export const Header = () => {
             <NavBar />
             <Logo />
             <div className="content__btns">
-              <Button className="btn-default btn-contact">Contato</Button>
+              <Link to="/contact" className="btn-default btn-contact">
+                Contato
+              </Link>
             </div>
           </>
         )}
@@ -30,10 +38,10 @@ export const Header = () => {
         {mobileMenu && mobile && (
           <>
             <nav className="mobile animate__animated animate__fadeInDownBig animate__fast">
-              <a href="#about-me">Sobre mim</a>
-              <a href="#techs">Tecnologias</a>
-              <a href="#projects">Projetos</a>
-              <a href="#projects">Contato</a>
+              <Link to="/">Sobre mim</Link>
+              <Link to="/tech">Tecnologias</Link>
+              <Link to="/projects">Projetos</Link>
+              <Link to="contact">Contato</Link>
             </nav>
           </>
         )}

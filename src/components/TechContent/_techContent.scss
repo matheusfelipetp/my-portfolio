@@ -1,0 +1,21 @@
+.tech {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-top: em(80);
+
+  @include device(x-large) {
+    padding: 0 em(24);
+  }
+
+  @include device(medium) {
+    margin-top: em(60);
+  }
+
+  .tech__info {
+    display: flex;
+    flex-direction: column;
+    gap: em(32);
+  }
+}

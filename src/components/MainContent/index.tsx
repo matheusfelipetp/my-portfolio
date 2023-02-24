@@ -1,9 +1,9 @@
 import ImgMain from '@/assets/main.png';
-import { Button } from '@/components';
 import { MobileContext } from '@/context/MobileContext';
 import 'animate.css';
 import { useContext, useEffect, useState } from 'react';
 import { BsGithub } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 export const MainContent = () => {
   const [isBtnVisible, setIsBtnVisible] = useState<boolean>(false);
@@ -27,19 +27,19 @@ export const MainContent = () => {
           Olá, meu nome é <span> Matheus</span>👋🏻
         </h1>
         {isBioVisible && (
-          <p className="bio animate__animated animate__fadeInUp">
+          <p className="paragraph animate__animated animate__fadeInUp">
             Sou <span>Desenvolvedor Full-Stack</span> e apaixonado por criar
             soluções inovadoras!
           </p>
         )}
         {isBtnVisible && (
           <div className="content__btns animate__animated animate__fadeInUp">
-            <Button className="btn-default btn-contact">
+            <Link to="/contact" className="btn-default btn-contact">
               Entre em contato
-            </Button>
-            <Button className="btn-default btn-projects">
+            </Link>
+            <Link to="projects" className="btn-default btn-projects">
               Veja meus projetos
-            </Button>
+            </Link>
             <a href="https://github.com/matheusfelipetp" target="_blank">
               <BsGithub className="icon-github" />
             </a>

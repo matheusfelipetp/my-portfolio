@@ -4,11 +4,11 @@
 @import 'fonts';
 @import 'device';
 @import 'global';
+@import 'button';
 
 // Components
-@import '@/components/Header/header';
-@import '@/components/NavBar/navbar';
-@import '@/components/MenuMobile/menuMobile';
-@import '@/components/Button/button';
-@import '@/components/MainContent/mainContent';
-@import '@/components/SkillsContent/skillsContent';
+@import '../components/Header/header';
+@import '../components/NavBar/navbar';
+@import '../components/MenuMobile/menuMobile';
+@import '../components/MainContent/mainContent';
+@import '../components/TechContent/techContent';

@@ -1,8 +1,8 @@
 .main {
+  @include container;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include container;
   box-sizing: border-box;
   margin-top: em(120);
   position: relative;
@@ -57,45 +57,8 @@
     opacity: 0.5;
   }
 
-  .title {
-    @include type-1(64);
-    color: $gray-1;
-    max-width: 12ch;
-
-    span {
-      color: $primary-light;
-    }
-
-    @include device(s-large) {
-      @include type-1(48);
-    }
-
-    @include device(medium) {
-      max-width: 100%;
-    }
-
-    @include device(x-small) {
-      @include type-1(32);
-      font-weight: 600;
-    }
-  }
-
-  .bio {
-    @include type-1(24);
-    color: $gray-3;
+  .paragraph {
     max-width: 35ch;
-
-    @include device(s-large) {
-      @include type-1(18);
-    }
-
-    @include device(medium) {
-      max-width: 100%;
-    }
-
-    @include device(x-small) {
-      @include type-1(16);
-    }
   }
 
   .main__img {
