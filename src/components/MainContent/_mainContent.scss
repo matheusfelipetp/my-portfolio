@@ -20,6 +20,14 @@
     flex-direction: column;
     gap: em(24);
 
+    .title {
+      max-width: 12ch;
+
+      @include device(medium) {
+        max-width: 100%;
+      }
+    }
+
     .content__btns {
       display: flex;
       align-items: center;
@@ -53,10 +61,6 @@
     }
   }
 
-  .opacity {
-    opacity: 0.5;
-  }
-
   .paragraph {
     max-width: 35ch;
   }
@@ -64,7 +68,7 @@
   .main__img {
     position: absolute;
     right: 0;
-    top: -20px;
+    top: 20px;
     animation: show 2s forwards, bouncing 1.5s ease-in-out infinite alternate;
 
     @include device(x-large) {
@@ -93,6 +97,6 @@
 
 @keyframes bouncing {
   100% {
-    top: 20px;
+    top: 40px;
   }
 }

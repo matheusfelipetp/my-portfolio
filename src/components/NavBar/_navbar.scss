@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   max-width: 100%;
-  gap: em(40);
+  gap: em(48);
 
   a {
     @include type-1(16);

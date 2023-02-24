@@ -11,10 +11,13 @@ body {
   }
 }
 
+.opacity {
+  opacity: 0.5;
+}
+
 .title {
   @include type-1(64);
   color: $gray-1;
-  max-width: 12ch;
 
   span {
     color: $primary-light;
