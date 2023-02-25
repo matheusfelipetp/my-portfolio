@@ -6,9 +6,6 @@ import { BsArrowRightShort } from 'react-icons/bs';
 export const ProjectContent = () => {
   const [isBtnVisible, setIsBtnVisible] = useState<boolean>(false);
   const [isCardVisible, setIsCardVisible] = useState<boolean>(false);
-  const [pagination, setPagination] = useState<number>(1);
-
-  const mobile = useMedia('(max-width:60rem)');
   const { mobileMenu } = useContext(MobileContext);
 
   useEffect(() => {
