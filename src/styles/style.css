@@ -484,7 +484,7 @@ body {
 }
 @media screen and (max-width: 760px) {
   .tech {
-    margin-top: 3.75em;
+    margin-top: 1.25em;
   }
 }
 @media screen and (max-width: 600px) {
@@ -651,6 +651,8 @@ body {
   gap: 5em;
   box-sizing: border-box;
   margin-top: 5em;
+  margin-top: 3.75em;
+  gap: 3.75em;
 }
 @media screen and (max-width: 1340px) {
   .projects {
@@ -659,7 +661,7 @@ body {
 }
 @media screen and (max-width: 760px) {
   .projects {
-    margin-top: 3.75em;
+    margin-top: 1.25em;
   }
 }
 @media screen and (max-width: 600px) {
@@ -672,9 +674,91 @@ body {
   flex-direction: column;
   gap: 2em;
 }
+@media screen and (max-width: 600px) {
+  .projects .projects__info {
+    gap: 1.25em;
+  }
+}
 .projects .projects__info .paragraph {
   max-width: 55ch;
 }
 .projects .projects__info .paragraph span {
   color: #ac93f5;
+}
+.projects .btn-github {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.875em;
+  background: #7950f2;
+  color: #f5f5f5;
+  max-width: 15.625em;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #7950f2;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+}
+@media screen and (max-width: 600px) {
+  .projects .btn-github {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 0.875em;
+    line-height: 2.1428571429em;
+  }
+}
+.projects .btn-github .arrow {
+  background: #f5f5f5;
+  color: #1f1f1f;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7950f2;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+.projects .btn-github .arrow svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7950f2;
+}
+.projects .btn-github:hover .arrow {
+  width: calc(100% - 0.6em);
+  transform: translateX(0.1em);
+}
+.projects .btn-github:active .arrow {
+  transform: scale(0.95);
+}
+.projects .projects-cards {
+  display: flex;
+  gap: 1.25em;
+  overflow-x: auto;
+  padding: 1.5rem 0;
+}
+.projects .projects-cards .card {
+  width: 30rem;
+  height: 22rem;
+  background-color: #1f1f1f;
+  border-radius: 1rem;
+  border: #1f1f1f 0.2rem solid;
+  transition: all 0.4s ease-in;
+  box-shadow: 0.4rem 0.4rem 0.6rem rgba(0, 0, 0, 0.2509803922);
+  padding: 11rem;
+}
+.projects .projects-cards .card:hover {
+  transform: translateY(-1.5rem);
+  border: #7950f2 0.2em solid;
+  border-radius: 2.5rem 0 2.5rem 0;
 }/*# sourceMappingURL=style.css.map */
