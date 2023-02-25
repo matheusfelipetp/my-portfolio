@@ -1,18 +1,6 @@
 .tech {
   @include container;
-  display: flex;
-  flex-direction: column;
-  gap: em(80);
-  box-sizing: border-box;
-  margin-top: em(80);
-
-  @include device(x-large) {
-    padding: 0 em(24);
-  }
-
-  @include device(medium) {
-    margin-top: em(60);
-  }
+  @include section;
 
   .title {
     @include device(small) {
@@ -21,9 +9,7 @@
   }
 
   .tech__info {
-    display: flex;
-    flex-direction: column;
-    gap: em(32);
+    @include section-content;
   }
 
   .tech-icon {
@@ -39,7 +25,7 @@
     @include device(small) {
       overflow-x: auto;
       flex-wrap: nowrap;
-      padding-bottom: 2rem;
+      padding: 2rem 0;
     }
 
     .icon__content {

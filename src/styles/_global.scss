@@ -3,6 +3,32 @@
   margin: 0 auto;
 }
 
+@mixin section {
+  display: flex;
+  flex-direction: column;
+  gap: em(80);
+  box-sizing: border-box;
+  margin-top: em(80);
+
+  @include device(x-large) {
+    padding: 0 em(24);
+  }
+
+  @include device(medium) {
+    margin-top: em(60);
+  }
+
+  @include device(small) {
+    gap: em(40);
+  }
+}
+
+@mixin section-content {
+  display: flex;
+  flex-direction: column;
+  gap: em(32);
+}
+
 body {
   background: linear-gradient(to right, $bg-1 35%, $bg-2);
 

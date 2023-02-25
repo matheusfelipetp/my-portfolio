@@ -22,7 +22,7 @@ $font-1: 'Raleway', sans-serif;
     line-height: em(30, 20);
   } @else if $size == 24 {
     font-size: em(24);
-    line-height: em(32, 24);
+    line-height: em(36, 24);
   } @else if $size == 32 {
     font-size: em(32);
     line-height: em(40, 32);

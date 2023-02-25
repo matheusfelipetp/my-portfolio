@@ -1,0 +1,16 @@
+.projects {
+  @include container;
+  @include section;
+
+  .projects__info {
+    @include section-content;
+
+    .paragraph {
+      max-width: 55ch;
+
+      span {
+        color: $primary-light;
+      }
+    }
+  }
+}
