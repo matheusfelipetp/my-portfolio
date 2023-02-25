@@ -1,5 +1,4 @@
 import { MobileContext } from '@/context/MobileContext';
-import useMedia from '@/hooks/useMedia';
 import { useContext, useEffect, useState } from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
 
