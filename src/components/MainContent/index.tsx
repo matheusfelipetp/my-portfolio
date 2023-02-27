@@ -1,6 +1,5 @@
 import ImgMain from '@/assets/main.png';
 import { MobileContext } from '@/context/MobileContext';
-import 'animate.css';
 import { useContext, useEffect, useState } from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { Link } from 'react-router-dom';

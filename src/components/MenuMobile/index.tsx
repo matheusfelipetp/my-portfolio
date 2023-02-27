@@ -1,5 +1,4 @@
 import { MobileContext } from '@/context/MobileContext';
-import 'animate.css';
 import { useContext } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 

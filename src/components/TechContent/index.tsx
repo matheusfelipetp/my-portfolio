@@ -1,5 +1,4 @@
 import { MobileContext } from '@/context/MobileContext';
-import 'animate.css';
 import { useContext, useEffect, useState } from 'react';
 import {
   SiCss3,

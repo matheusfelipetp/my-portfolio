@@ -1,3 +1,4 @@
+import { ProjectCards } from '@/components';
 import { MobileContext } from '@/context/MobileContext';
 import { useContext, useEffect, useState } from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
@@ -40,18 +41,7 @@ export const ProjectContent = () => {
         )}
       </div>
 
-      {isCardVisible && (
-        <div className="projects-cards animate__animated animate__fadeIn">
-          <div className="card">1</div>
-          <div className="card">2</div>
-          <div className="card">3</div>
-          <div className="card">4</div>
-          <div className="card">5</div>
-          <div className="card">6</div>
-          <div className="card">7</div>
-          <div className="card">8</div>
-        </div>
-      )}
+      {isCardVisible && <ProjectCards />}
     </section>
   );
 };
