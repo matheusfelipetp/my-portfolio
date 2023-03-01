@@ -1,15 +1,22 @@
+import { Forms } from '@/components';
 import { MobileContext } from '@/context/MobileContext';
 import { useContext, useEffect, useState } from 'react';
 import { SiGithub, SiGmail, SiInstagram, SiLinkedin } from 'react-icons/si';
 
 export const ContactContent = () => {
-  const [isSocialVisible, setIsSocialVisible] = useState<boolean>();
+  const [isSocialVisible, setIsSocialVisible] = useState<boolean>(false);
+  const [isFormVisible, setIsFormVisible] = useState<boolean>(false);
+
   const { mobileMenu } = useContext(MobileContext);
 
   useEffect(() => {
     setTimeout(() => {
       setIsSocialVisible(true);
     }, 500);
+
+    setTimeout(() => {
+      setIsFormVisible(true);
+    }, 700);
   }, []);
 
   return (
@@ -46,6 +53,8 @@ export const ContactContent = () => {
             </a>
           </div>
         )}
+
+        {isFormVisible && <Forms />}
       </div>
     </section>
   );

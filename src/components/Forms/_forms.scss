@@ -1,0 +1,19 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: em(20);
+  margin-top: em(20);
+  max-width: em(800);
+
+  @include device(s-large) {
+    max-width: em(600);
+  }
+
+  button {
+    max-width: 30%;
+
+    @include device(medium) {
+      max-width: 100%;
+    }
+  }
+}
