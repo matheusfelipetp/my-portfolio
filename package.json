@@ -9,12 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^2.9.11",
     "animate.css": "^4.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.2",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.8.1",
-    "swiper": "^9.0.5"
+    "swiper": "^9.0.5",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "@types/node": "^18.14.1",

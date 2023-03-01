@@ -1,6 +1,5 @@
 export { Forms } from './Forms';
 export { Header } from './Header';
-export { Input } from './Input';
 export { Logo } from './Logo';
 export { MainContent } from './MainContent';
 export { MenuMobile } from './MenuMobile';
