@@ -9,6 +9,10 @@
     max-width: em(600);
   }
 
+  @include device(medium) {
+    margin-bottom: em(20);
+  }
+
   button {
     max-width: 30%;
 

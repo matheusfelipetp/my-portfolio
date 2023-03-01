@@ -38,7 +38,11 @@ export const ProjectCards = () => {
             </p>
 
             <div className="card__btns">
-              <a className="btn-default btn-contact" href="" target="_blank">
+              <a
+                className="btn-default btn-contact"
+                href="https://matheusfelipe.vercel.app/"
+                target="_blank"
+              >
                 Live Preview
               </a>
               <a
