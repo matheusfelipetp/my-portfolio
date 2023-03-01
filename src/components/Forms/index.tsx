@@ -1,5 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
+import { SiWhatsapp } from 'react-icons/si';
 import * as yup from 'yup';
 
 interface IData {
@@ -72,7 +73,8 @@ export const Forms = () => {
       </div>
 
       <button type="submit" className="btn-default btn-contact">
-        Enviar
+        <p>Enviar mensagem</p>
+        <SiWhatsapp />
       </button>
     </form>
   );
