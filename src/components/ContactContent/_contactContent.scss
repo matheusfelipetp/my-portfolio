@@ -1,0 +1,50 @@
+.contact {
+  @include container;
+  @include section;
+  margin-top: em(60);
+  gap: em(60);
+
+  .contact__info {
+    @include section-content;
+    @include device(small) {
+      gap: em(20);
+    }
+
+    .paragraph {
+      max-width: 55ch;
+    }
+
+    .info__social {
+      display: flex;
+      gap: em(32);
+
+      .social-icon {
+        font-size: em(40);
+        color: $gray-4;
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.3s ease;
+        }
+      }
+
+      a:first-child .social-icon:hover {
+        color: #0077b7;
+      }
+
+      a:nth-child(2) .social-icon:hover {
+        color: #bf2290;
+      }
+
+      a:nth-child(3) .social-icon:hover {
+        color: #d3382a;
+      }
+
+      a:nth-child(4) .social-icon:hover {
+        color: $gray-1;
+      }
+    }
+  }
+}

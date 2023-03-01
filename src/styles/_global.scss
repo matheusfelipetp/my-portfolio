@@ -78,4 +78,8 @@ body {
   @include device(x-small) {
     @include type-1(16);
   }
+
+  span {
+    color: $primary-light;
+  }
 }
