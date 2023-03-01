@@ -84,9 +84,17 @@
     gap: em(10);
     background: #25d366;
     border: 1px solid #25d366;
-  }
 
-  button p {
-    color: #fff;
+    &:hover {
+      background: #25d366;
+      border: 1px solid $gray-1;
+      color: $gray-1;
+      border-radius: 0;
+      transition: 0.3s ease;
+    }
+
+    p {
+      color: #fff;
+    }
   }
 }
