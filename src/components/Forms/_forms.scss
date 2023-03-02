@@ -16,7 +16,7 @@
   button {
     max-width: 30%;
 
-    @include device(medium) {
+    @include device(s-large) {
       max-width: 100%;
     }
   }
